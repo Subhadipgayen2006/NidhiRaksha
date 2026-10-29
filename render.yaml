@@ -13,8 +13,9 @@ services:
         generateValue: true
       - key: CORS_ORIGINS
         value: https://nidhiraksha-frontend.onrender.com
-  - type: static
+  - type: web
     name: nidhiraksha-frontend
+    runtime: static
     rootDir: frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: dist

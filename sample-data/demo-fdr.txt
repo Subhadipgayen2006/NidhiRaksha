@@ -1,0 +1,9 @@
+FICTIONAL SAMPLE — NOT A BANK INSTRUMENT
+Institution Name: Eastern Institute of Technology (Fictional)
+Institution ID: AICTE-DEMO-001
+Bank Name: National Sample Bank
+FDR Number: FDR-SAMPLE-2026-042
+Deposit Amount: INR 500000.00
+Issue Date: 01/01/2026
+Maturity Date: 01/01/2027
+This is synthetic demonstration content only. Not valid for banking, financial, or regulatory use.

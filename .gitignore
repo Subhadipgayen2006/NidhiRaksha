@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+storage/
+*.db
+*.sqlite
+*.sqlite3
+*.tsbuildinfo

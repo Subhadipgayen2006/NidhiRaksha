@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: nidhiraksha
+      POSTGRES_USER: nidhiraksha
+      POSTGRES_PASSWORD: change-me
+    ports:
+      - "5432:5432"
+    volumes:
+      - nidhiraksha_pg:/var/lib/postgresql/data
+volumes:
+  nidhiraksha_pg:

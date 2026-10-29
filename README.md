@@ -43,6 +43,28 @@ npm run dev
 
 Open the local URL printed by Vite, normally http://localhost:5173. Keep both terminals open while using the app.
 
+## Free demo deployment
+
+The repository includes a Render Blueprint for the API (`render.yaml`) and Vercel
+configuration for the frontend (`frontend/vercel.json`).
+
+1. In Render, create a Blueprint from this GitHub repository and deploy the
+   `nidhiraksha-api` free web service.
+2. In Vercel, import the same repository and set the project root directory to
+   `frontend`. Set the `VITE_API_BASE` environment variable to the deployed API
+   URL followed by `/api` (for example, `https://your-api.onrender.com/api`),
+   then deploy.
+3. In the Render service's environment settings, set `CORS_ORIGINS` to the exact
+   deployed Vercel site origin (for example, `https://your-site.vercel.app`) and
+   redeploy the API.
+
+Free instances may sleep when idle, and the SQLite database and uploaded files
+are stored on an ephemeral filesystem. Data can be lost when the service restarts
+or is redeployed. This is a public, unauthenticated demo; anyone can view or alter
+its demo records and upload files. Use fictional data only, never real financial
+documents or personal information. A production deployment needs authentication,
+persistent database and file storage, and a security review.
+
 ## Demo walkthrough
 1. Open Upload & Extract and upload `sample-data/demo-fdr.pdf` or `sample-data/demo-fdr.png`.
 2. Review extracted fields, edit if needed, and choose Validate & Save.

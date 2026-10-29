@@ -45,18 +45,12 @@ Open the local URL printed by Vite, normally http://localhost:5173. Keep both te
 
 ## Free demo deployment
 
-The repository includes a Render Blueprint for the API (`render.yaml`) and Vercel
-configuration for the frontend (`frontend/vercel.json`).
+The repository includes a Render Blueprint for the API and frontend (`render.yaml`).
 
-1. In Render, create a Blueprint from this GitHub repository and deploy the
-   `nidhiraksha-api` free web service.
-2. In Vercel, import the same repository and set the project root directory to
-   `frontend`. Set the `VITE_API_BASE` environment variable to the deployed API
-   URL followed by `/api` (for example, `https://your-api.onrender.com/api`),
-   then deploy.
-3. In the Render service's environment settings, set `CORS_ORIGINS` to the exact
-   deployed Vercel site origin (for example, `https://your-site.vercel.app`) and
-   redeploy the API.
+In Render, create or sync the Blueprint from this GitHub repository. It defines
+the free `nidhiraksha-api` web service and `nidhiraksha-frontend` static site.
+The frontend is configured to call the API, and the API's CORS allowlist is set
+to the frontend's Render origin.
 
 Free instances may sleep when idle, and the SQLite database and uploaded files
 are stored on an ephemeral filesystem. Data can be lost when the service restarts
